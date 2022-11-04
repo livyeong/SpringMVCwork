@@ -50,6 +50,14 @@
 						<form:password path="user_pw2" class='form-control' showPassword="true" />
 						<form:errors path='user_pw2' style='color:coral'/>
 					</div>
+					
+					<!-- 회원탈퇴 
+					<div class="form-group">
+						<form:label path="user_pw2">회원탈퇴</form:label>
+						<form:password path="user_pw2" class='form-control' showPassword="true" />
+						<form:errors path='user_pw2' style='color:coral'/>
+					</div> -->
+					
 					<div style="color:coral">${msg }</div>
 					<div class="form-group">
 						<div class="text-right">

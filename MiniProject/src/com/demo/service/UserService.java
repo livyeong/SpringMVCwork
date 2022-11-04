@@ -28,6 +28,8 @@ public class UserService {
 			return false; // 똑같은 아이디 있음
 
 		}
+	
+
 	}
 
 	// DB에 새 유저를 저장
@@ -54,12 +56,12 @@ public class UserService {
 		modifyUserBean.setUser_name(temp.getUser_name());
 		modifyUserBean.setUser_idx(loginUserBean.getUser_idx());
 	}
-	
-	
+
 	public void modifyUserInfo(UserBean modifyUserBean) {
-		//로그인유저객체에서 유저인덱스번호를 가져와 입력
+		// 로그인유저객체에서 유저인덱스번호를 가져와 입력
 		modifyUserBean.setUser_idx(loginUserBean.getUser_idx());
-		
-		userMapper.modifyUserInfo(modifyUserBean); //실제 DB에서 수정
+
+		userMapper.modifyUserInfo(modifyUserBean); // 실제 DB에서 수정
 	}
+
 }

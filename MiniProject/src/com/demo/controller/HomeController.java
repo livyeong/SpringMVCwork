@@ -13,6 +13,6 @@ public class HomeController {
 	public String home(HttpServletRequest request) {
 		//System.out.println(request.getServletContext().getRealPath("/")); //서버 실행시 실제주소
 			
-		return "index";
+		return "redirect:/main";
 	}
 }

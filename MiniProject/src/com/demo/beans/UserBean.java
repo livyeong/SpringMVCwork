@@ -31,12 +31,13 @@ public class UserBean {
 	private int viewCnt;
 	
 	
-	@Size(min = 4, max = 20, message = "닉네임은 4~20까지 가능합니다")
-	@Pattern(regexp = "[가-힣]*", message = "한글만 입력해주세요.")
-	private String nick_name;
+	/*
+	 * @Size(min = 4, max = 20, message = "닉네임은 4~20까지 가능합니다")
+	 * 
+	 * @Pattern(regexp = "[가-힣]*", message = "한글만 입력해주세요.") private String
+	 * nick_name;
+	 */
 	
-	@AssertTrue(message = "닉네임 중복체크 해주세요.") 
-	private boolean nickNameChecked;
 	
 	public int getViewCnt() {
 		return viewCnt;
@@ -46,13 +47,11 @@ public class UserBean {
 		this.viewCnt = viewCnt;
 	}
 
-	public String getNick_name() {
-		return nick_name;
-	}
-
-	public void setNick_name(String nick_name) {
-		this.nick_name = nick_name;
-	}
+	/*
+	 * public String getNick_name() { return nick_name; }
+	 * 
+	 * public void setNick_name(String nick_name) { this.nick_name = nick_name; }
+	 */
 
 	public UserBean() {
 		this.userIdChecked = false;// 처음에는 아이디 체크 안됨
@@ -106,12 +105,6 @@ public class UserBean {
 		this.user_pw = user_pw;
 	}
 
-	public boolean isNickNameChecked() {
-		return nickNameChecked;
-	}
 
-	public void setNickNameChecked(boolean nickNameChecked) {
-		this.nickNameChecked = nickNameChecked;
-	}
 
 }

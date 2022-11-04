@@ -13,14 +13,16 @@ public interface UserMapper {
 			+ "where user_id = #{user_id}")
 	String checkUserIdExist(String user_id);
 	
-	@Select("select user_name from user_table "
-			+ "where nick_name = #{nick_name}")
-	String checkNickNameExist(String nick_name);
+	/*
+	 * @Select("select user_name from user_table " +
+	 * "where nick_name = #{nick_name}") String checkNickNameExist(String
+	 * nick_name);
+	 */
 	
 	
 	//새 유저 저장하기 (유저인덱스번호는 시퀀스로 자동생성됨)
-	@Insert("insert into user_table (user_idx, user_name, user_id, user_pw, nick_name) " + 
-			"values(user_seq.nextval, #{user_name}, #{user_id}, #{user_pw}, #{nick_name})")
+	@Insert("insert into user_table (user_idx, user_name, user_id, user_pw) " + 
+			"values(user_seq.nextval, #{user_name}, #{user_id}, #{user_pw})")
 	void addUserInfo(UserBean joinUserBean);
 	
 	//id pw로 유저가 가입된 상태인지 확인 (null이 아니면 가입된 상태)

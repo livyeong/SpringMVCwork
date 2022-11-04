@@ -22,7 +22,7 @@ public class LoginUserBean {
 	private String user_id; // 아이디
 
 	@Size(min = 4, max = 20, message = "비밀번호는 4~20까지 가능합니다")
-	@Pattern(regexp = "[a-zA-Z0-9]*", message = "영문소문자 대문자 숫자만 입력가능")
+	@Pattern(regexp = "[a-zA-Z0-9!@#$%^]*", message = "영문(대소문자구분), 특수문자(!@#$%^만 허용), 숫자를 혼용하여 입력해주세요.")
 	private String user_pw; // 비번
 
 	private boolean userLogin; // 로그인 상태 추가

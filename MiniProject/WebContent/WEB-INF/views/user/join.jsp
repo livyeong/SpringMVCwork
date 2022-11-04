@@ -80,21 +80,7 @@
                 	<form:errors path="userIdChecked" style="color:coral" />
                 </div>
                 
-                     <div class="form-group">
-                  <form:label path="nick_name">닉네임</form:label>
-                  <div class="input-group">
-                    <form:input path="nick_name" class="form-control" />
-                    <div class="input-group-append">
-                      <button type="button" onclick="checkNickNameExist()" class="btn btn-primary">중복확인</button>
-                    </div>
-                  </div>
-                  <form:errors path="nick_name" style="color:coral" />
-                </div>
-                <div class="form-group" id="NickNameCheck">
-                	<form:hidden path="nickNameChecked" />
-                	<form:errors path="nickNameChecked" style="color:coral" />
-                </div>
-                
+                    
                 <div class="form-group">
                   <form:label path="user_pw">비밀번호</form:label>
                   <form:password showPassword="true" path="user_pw" class="form-control" />
